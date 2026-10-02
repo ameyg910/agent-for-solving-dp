@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: dp-dataset-factory
+Version: 0.1.0
+Summary: Automated dataset factory for dynamic programming reasoning
+Requires-Python: >=3.10
+Requires-Dist: requests>=2.31
+Requires-Dist: httpx>=0.27
+Requires-Dist: pydantic>=2.7
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: tqdm>=4.66
+Requires-Dist: orjson>=3.10
+Requires-Dist: tenacity>=8.2

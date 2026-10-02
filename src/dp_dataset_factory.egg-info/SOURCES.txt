@@ -1,0 +1,7 @@
+pyproject.toml
+src/dp_dataset_factory.egg-info/PKG-INFO
+src/dp_dataset_factory.egg-info/SOURCES.txt
+src/dp_dataset_factory.egg-info/dependency_links.txt
+src/dp_dataset_factory.egg-info/entry_points.txt
+src/dp_dataset_factory.egg-info/requires.txt
+src/dp_dataset_factory.egg-info/top_level.txt
