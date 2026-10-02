@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Raw / generated datasets
+data/raw/
+data/normalized/
+data/verified/
+data/synthetic/
+data/adversarial/
+data/training/
+data/deduplicated/
+
+# Logs
+logs/
+
+# Temporary files
+tmp/
+*.tmp
