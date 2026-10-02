@@ -18,3 +18,4 @@ logs/
 # Temporary files
 tmp/
 *.tmp
+src/*.egg-info/
