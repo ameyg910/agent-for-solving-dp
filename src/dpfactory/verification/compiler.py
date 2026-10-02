@@ -32,13 +32,12 @@ def normalize_language(language: str) -> str | None:
 
 
 CPP_FLAGS = {
-    "cpp": ["-std=c++17"],
-    "cpp11": ["-std=c++11"],
-    "cpp14": ["-std=c++14"],
-    "cpp17": ["-std=c++17"],
-    "cpp20": ["-std=c++20"],
+    "cpp": ["-std=gnu++17"],
+    "cpp11": ["-std=gnu++11"],
+    "cpp14": ["-std=gnu++14"],
+    "cpp17": ["-std=gnu++17"],
+    "cpp20": ["-std=gnu++20"],
 }
-
 
 def compile_solution(
     source_code: str,
