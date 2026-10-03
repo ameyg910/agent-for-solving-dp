@@ -20,7 +20,7 @@ PROBLEMS_PATH = Path("data/raw/open_r1_codeforces_train.jsonl")
 SOLUTIONS_PATH = Path("data/normalized/dp_solutions.jsonl")
 OUTPUT_PATH = Path("data/verified/verified_solutions.jsonl")
 
-MAX_PROBLEMS = 50
+MAX_PROBLEMS = 1000
 MAX_SOLUTIONS_PER_PROBLEM = 2
 RANDOM_SEED = 42
 
@@ -29,6 +29,21 @@ def load_jsonl(path: Path) -> list[dict]:
     with path.open(encoding="utf-8") as f:
         return [json.loads(line) for line in f]
 
+def output_is_case_insensitive(problem: dict) -> bool:
+    output_format = str(problem.get("output_format", ""))
+    text = output_format.lower()
+
+    patterns = (
+        "any case",
+        "case does not matter",
+        "case doesn't matter",
+        "case-insensitive",
+        "case insensitive",
+        "uppercase or lowercase",
+        "upper or lower case",
+    )
+
+    return any(pattern in text for pattern in patterns)
 
 def pypy_available() -> bool:
     return subprocess.run(
@@ -200,6 +215,7 @@ def verify_solution(
                 expected_output=test["output"],
                 timeout_seconds=timeout_seconds,
                 interpreter=interpreter,
+                case_insensitive=output_is_case_insensitive(problem),
             )
 
             execution_times.append(
