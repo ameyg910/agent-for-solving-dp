@@ -1,0 +1,23 @@
+{
+  "seed": 42,
+  "problems": {
+    "total": 1000,
+    "train": 800,
+    "val": 100,
+    "test": 100
+  },
+  "examples": {
+    "train": 1591,
+    "val": 199,
+    "test": 199,
+    "total": 1989
+  },
+  "verified_statuses": {
+    "CE": 7,
+    "PASSED_AVAILABLE_TESTS": 1466,
+    "PASSED_CHECKER": 255,
+    "PASSED_EXACT": 268,
+    "RE": 1,
+    "WRONG_ANSWER": 3
+  }
+}
