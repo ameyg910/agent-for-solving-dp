@@ -122,6 +122,7 @@ def verify_solution(
         "language": language,
         "verdict": solution.get("verdict"),
         "source": solution.get("source"),
+        "source_code": solution["source_code"],
     }
 
     if normalized is None:
